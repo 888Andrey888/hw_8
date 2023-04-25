@@ -34,7 +34,7 @@ public class Boss extends GameEntity {
                     }
                 }
                 if (heroes[i].getHealth() > 0) {
-                    heroes[i].setHealth(heroes[i].getHealth() - ((!Druid.isCrow() && this.getHealth() <= (this.getHealth() / 2)) ?
+                    heroes[i].setHealth(heroes[i].getHealth() - ((!Druid.isCrow() && this.getHealth() < (this.getHealth() / 2)) ?
                             this.getDamage() : (this.getDamage() + (this.getDamage() / 2))));
                 }
             }
